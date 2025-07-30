@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="contenedor">
+        <section class="bienvenida">
+            <img class="bienvenida_img" src="corona.png" alt="">
+            
+            <h2 class="bienvenida_tit">MIS 15 AÑOS</h2>
+            <h1 class="bienvenida_nombre">Ninel Oriana </h1>
+            
+        </section>
+        
+
+        <section class="datos">
+            <h3 class="datos_invitación">Te invitamos a celebrar</h3>
+            <img class="adorno" src="adorno.png" alt="">
+            <p class="datos_frase">En un rincón del tiempo… un sueño florece, y con él, una historia de quince primaveras que espera ser celebrada contigo.</p>
+            <p class="datos_text_rojo">Tu presencia hará de este día un recuerdo inolvidable</p>
+            <h3 class="datos_invitación">Mi Madre</h3>
+            <p class="datos_nombres"> Edelina Chuquillanqui Ventura</p>
+            <h3 class="datos_invitación">Mis Padrinos</h3>
+            <p class="datos_nombres">Edwin Ventura Garcia</p>
+            <p class="datos_nombres">Gheidy Ventura Bautista</p>
+        </section>
+        <section class="regresiva">
+            <h3 class="regresiva_tit"> Aparta la fecha</h3>
+            <H2 class="regresiva_fecha">SÁB. <B>16</B> AGO.</H2>
+            <h3 class="regresiva_tit">¡Estoy emocionada!</h3>
+            <h3 class="regresiva_tit">Falta solo:</h3>
+            <br>
+            <div id="cuenta-regresiva" style="font-size: 1.5em; font-weight: bold; margin-top: 10px;"></div>
+        </section>
+        <section class="ubicacion">
+            <h3 class="ubicacion_pregunta">¿Cúando y dónde?</h3>
+            <img class="adorno" src="adorno.png" alt="">
+            <p class="ubicacion_text">Salón de Recepciones:</p>
+            <h3 class="ubicacion_pregunta"> "La familia"</h3>
+            <p class="ubicacion_direccion"> Av. Jose Olaya y Jr. San Agustín</p>
+            <p class="ubicacion_text">REF. Una cuadra hacia arriba del cementerio Esperanza Eterna</p>
+            <p class="ubicacion_hora">- 05:00 PM -</p>
+            <img class="adornouno" src="ubicacion.png" alt="">
+            <a href="https://maps.app.goo.gl/T1MeaAGMCcbr33X46"> VER UBICACIÓN</a>
+        </section>
+        <section class="amanecer">
+            <p class="amanecer_text">Hoy dejo atrás los cuentos de infancia… para escribir mi propia historia, rodeada de quienes más amo.</p>
+            <h3 class="amanecer_frase"> Esta noche, el tiempo se detiene… y la magia comienza.</h3>
+        </section>
+        <section class="asistencia">
+            <h3 class="asistencia_pregunta">¿Asistirás?</h3>
+            <img class="adorno" src="adorno.png" alt="">
+            <p class="asistencia_text">¡Será increíble contar con tu presencia!</p>
+            <p class="asistencia_text">Por favor confirma tu asistencia a este día tan especial para mi.</p>
+            <a class="btn-whatsapp" href="https://wa.me/51973024620?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20fiesta%20de%20Ninel%20Oriana%20🎉👑" target="_blank">
+                CONFIRMAR ASISTENCIA
+            </a>
+            <h3 class="asistencia_preguntas">Código de Vestimenta</h3>
+            <P class="asistencia_etiqueta">ETIQUETA - FORMAL</P>
+            <p class="asistencia_text">El color rosa esta reservado para la quinceañera</p>
+
+        </section>
+        <section class="final"> 
+            
+            <p class="final_frase">He soñado con este momento… y tú formas parte de él. Tu misión: brillar en la pista y bailar conmigo hasta que el último acorde suene.</p>
+            <p class="final_text">¡Esperamos contar con su presencia!</p>
+            
+    
+        </section>
+        <!-- Contenedor de la cuenta regresiva -->
+<div id="cuenta-regresiva" class="cuenta"></div>
+
+<!-- Sección de música -->
+<section class="musica">
+  <audio id="audio" loop>
+    <source src="musicaOri.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <button id="btn-musica" class="btn-musica" aria-label="Reproducir música">
+    <img src="boton-de-play.png" alt="Música" id="icono-musica">
+  </button>
+</section>
+
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // === CUENTA REGRESIVA ===
+    const fechaEvento = new Date("2025-08-16T00:00:00").getTime();
+    const contenedor = document.getElementById("cuenta-regresiva");
+
+    const actualizarCuenta = () => {
+      const ahora = new Date().getTime();
+      const diferencia = fechaEvento - ahora;
+
+      if (diferencia <= 0) {
+        contenedor.innerHTML = "¡Ya llegó el gran día!";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      contenedor.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    };
+
+    actualizarCuenta();
+    setInterval(actualizarCuenta, 1000);
+
+    // === MÚSICA ===
+    const audio = document.getElementById('audio');
+    const btn = document.getElementById('btn-musica');
+    let reproduciendo = false;
+
+    btn.addEventListener('click', () => {
+      if (reproduciendo) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      reproduciendo = !reproduciendo;
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

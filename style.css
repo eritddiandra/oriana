@@ -1,0 +1,382 @@
+.contenedor {
+  max-width: 480px; /* Ideal para celulares grandes sin pasarse */
+  margin: 0 auto;
+  background-color: #fff; /* fondo blanco de base */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* sombra sutil */
+  border-radius: 16px; /* bordes suaves */
+  overflow: hidden; /* para que nada se desborde */
+  font-family: 'Poppins', sans-serif;
+}
+.p{
+      font-weight: 500;
+      font-size: 1.1em;
+      font-family: 'Poppins', sans-serif ;
+}
+.bienvenida {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* pantalla completa */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url("ori.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+.bienvenida_img{
+  display: block;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 70px; /* Ajusta el tamaño según tu diseño */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+}
+.bienvenida_nombre {
+  font-family: 'The Nautigal', cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+}
+.bienvenida_tit {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@keyframes aparecerNombre {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0px) scale(1.02);
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bienvenida_nombre {
+  font-family: 'The Nautigal', cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 0px;
+  animation: aparecerNombre 1.8s ease-out forwards;
+}
+
+.datos {
+  background-color: #fdf6ee; /* blanco champagne */
+  padding: 20px 20px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.datos_invitación {
+  font-size: 3em;
+  font-weight: bold;
+  color: #d36ca0; /* rosa suave */
+  margin: 20px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+.adorno {
+  display: block;
+  margin: 0px auto;
+  width: 250px; /* Ajusta el tamaño según tu diseño */
+  max-width: 100%;
+  height: auto;
+}
+
+
+.datos_frase {
+font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.datos_text_rojo {
+    font-size: 1.1em;
+
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.datos_nombres {
+font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.regresiva {
+  position: relative;
+  background-image: url('curva.jpg'); /* reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0px;
+}
+
+.regresiva::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece el fondo */
+  z-index: 1;
+  border-radius: 0;
+}
+
+.regresiva h3,
+.regresiva h2 {
+  position: relative;
+  z-index: 2;
+  margin: 10px 0;
+}
+
+.regresiva_tit {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff; /* rosa suave */
+  margin: 20px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+
+.regresiva_fecha {
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff0f5;
+  
+}
+#cuenta-regresiva {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff0f5;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ubicacion {
+  background-color: #fdf6ee; /* champán claro */
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #4a4a4a;
+}
+
+.ubicacion_pregunta {
+    font-size: 3em;
+  font-weight: bold;
+  color: #d36ca0; /* rosa suave */
+  margin: 20px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+
+
+.ubicacion_text {
+font-size: 1.1em;
+  margin-bottom: 0px;
+  color: #4a4a4a;
+}
+
+
+.ubicacion_direccion {
+    font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.ubicacion_hora {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #d36ca0;
+  margin: 10px 0;
+}
+.adornouno{
+display: block;
+  margin: 0px auto;
+  width: 80px; /* Ajusta el tamaño según tu diseño */
+  max-width: 100%;
+  height: auto;
+}
+
+.ubicacion a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background-color: #5e1323;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.ubicacion a:hover {
+  background-color: #d36ca0;
+}
+
+.amanecer {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('completo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.amanecer_text {
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+
+.amanecer_frase {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff; /* rosa suave */
+  margin: 20px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+
+.asistencia {
+  background-color: #fdf6ee; /* color crema rosado suave */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.asistencia_pregunta {
+ font-size: 3em;
+  font-weight: bold;
+  color: #d36ca0; /* rosa suave */
+  margin: 10px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+.asistencia_preguntas{
+  font-size: 3em;
+  font-weight: bold;
+  color: #d36ca0; /* rosa suave */
+  margin-top: 1em;
+  font-family: 'The Nautigal', cursive;
+}
+
+.asistencia_text {
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background-color: #5e1323;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #d36ca0;
+}
+
+.asistencia_etiqueta {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d36ca0;
+  margin-top: 0px;
+}
+
+.final {
+  background-color: #5e1323; /* fondo rosado muy claro */
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 0em 0em 1em 1em;
+}
+
+.final_frase {
+   font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.final_text {
+ font-size: 3em;
+  font-weight: bold;
+  color: #fff; /* rosa suave */
+  margin: 20px 0 10px;
+  font-family: 'The Nautigal', cursive;
+}
+
+
+
+/* Botón de música */
+.musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.btn-musica {
+  background: #5e1323;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.8),
+              0 0 20px rgba(255, 182, 193, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.btn-musica:active {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.9),
+              0 0 25px rgba(255, 182, 193, 0.7);
+}
+
+.btn-musica img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
